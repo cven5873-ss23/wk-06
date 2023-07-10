@@ -4,7 +4,7 @@ subtitle: "Quarto for Data Communication"
 format: html
 ---
 
-# R Package jmpwashdata
+## R Package jmpwashdata
 
 For this analysis we will use the jmpwashdata R Package. The package contains all data compiled by the WHO/UNICEF Joint Monitoring Programme (JMP).
 
@@ -18,7 +18,7 @@ library(gt)
 library(ggthemes)
 ```
 
-# World Bank income groups
+## World Bank income groups
 
 We will also use the World Bank income classification for 218 countries. This data was downloaded and stored as an XLSX file using an R script in `src`.
 
@@ -28,7 +28,7 @@ income_groups_df <- read_rds(here::here("data/wb-income-groups.rds"))
 
 ```
 
-# Basic Sanitation & GDP
+## Basic Sanitation & GDP
 
 Data for the most recent year, basic sanitation in urban areas, calculate urban population, and join income groups.
 
@@ -52,7 +52,7 @@ jmp_wld_sanitation_gdp_income <- jmp_wld_sanitation |>
 
 ```
 
-# Basic Sanitation Uganda
+## Basic Sanitation Uganda
 
 ```{r}
 
@@ -88,7 +88,7 @@ jmp_uga_sanitation <- jmp_wld_sanitation |>
 
 ```
 
-# Income
+## Income
 
 Below is a box- and jitterplot of countries with percentages of populations with access to basic sanitation in 2020 grouped by income classifications.
 
@@ -112,7 +112,7 @@ ggplot(data = jmp_wld_sanitation_gdp_income,
   theme(legend.position = "none")
 ```
 
-# Regions
+## Regions
 
 The table below shows urban sanitation indicators for global regions in 2020.
 
@@ -137,7 +137,7 @@ jmp_reg_sanitation |>
 
 ```
 
-# Uganda
+## Uganda
 
 The figure below shows the sanitation ladder for Uganda.
 
